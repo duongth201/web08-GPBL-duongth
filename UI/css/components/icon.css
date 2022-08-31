@@ -1,0 +1,14 @@
+.icon{
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.icon--24{
+    width: 24px;
+    height: 24px;
+}
+
+.icon--36{
+    width: 36px;
+    height: 36px;
+}

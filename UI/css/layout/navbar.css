@@ -1,0 +1,7 @@
+.navbar{
+    width: 200px;
+    height: 100%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    background-color: rgb(66, 66, 66);
+}

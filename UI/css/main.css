@@ -1,0 +1,41 @@
+@import url(./layout/header.css);
+@import url(./layout/navbar.css);
+@import url(./layout/content.css);
+@import url(./components/icon.css);
+@import url(./components/button.css);
+@import url(./components/input.css);
+@import url(./components/toast.css);
+@import url(../assets/font/fontawesome-5.15.1/js/all.min.js);
+
+body{
+    margin:  0;
+    font-family: Notosans;
+    font-size: 13px;
+}
+
+@font-face {
+    font-family: Notosans;
+    src: url("../assets/font/notosans-regular.2cb88a13.woff2");
+}
+
+@font-face {
+    font-family: Notosans Bold;
+    src: url("../assets/font/notosans-bold.3ede5aff.woff2");
+}
+
+@font-face {
+    font-family: Notosans Italic;
+    src: url("../assets/font/notosans-italic.1c1aaac9.woff2");
+}
+
+@font-face {
+    font-family: Notosans Semibold;
+    src: url("../assets/font/notosans-semibold.df3e6dc4.woff2");
+}
+
+.main{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 56px);
+    background-color: gray;
+}
