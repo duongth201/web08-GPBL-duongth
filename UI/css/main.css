@@ -1,5 +1,5 @@
 @import url(./layout/header.css);
-@import url(./layout/navbar.css);
+@import url(./layout/sibar.css);
 @import url(./layout/content.css);
 @import url(./components/icon.css);
 @import url(./components/button.css);
@@ -7,8 +7,21 @@
 @import url(./components/toast.css);
 @import url(../assets/font/fontawesome-5.15.1/js/all.min.js);
 
+:root{
+    --Light-green500: #50B83C; 
+    --Light--green400: #73C663;
+    --Dark-green: #089740;
+    --Gray: #9E9E9E;
+    --Gray-400: #BDBDBD;
+    --Gray-300: #E0E0E0;
+    --Gray-100: #F5F5F5;
+    --Red: #E60000;
+    --Gray-bold: #424242;
+}
+
 body{
     margin:  0;
+    padding: 0;
     font-family: Notosans;
     font-size: 13px;
 }
@@ -33,9 +46,14 @@ body{
     src: url("../assets/font/notosans-semibold.df3e6dc4.woff2");
 }
 
+.line__generate{
+    width: 100%;
+    margin-top: 4px;
+}
+
 .main{
     display: flex;
     width: 100%;
     height: calc(100vh - 56px);
-    background-color: gray;
+    background-color: var(--Gray-300);
 }
