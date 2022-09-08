@@ -18,3 +18,21 @@
     width: 36px;
     height: 36px;
 }
+
+.icon__dropdown{
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+
+.icon__dropdown::before{
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: 8px;
+    width: 16px;
+    height: 16px;
+    scale: 120%;
+    background-image: url(../../assets/img/Sprites.64af8f61.svg);
+    background-position: -467px -414px;
+}

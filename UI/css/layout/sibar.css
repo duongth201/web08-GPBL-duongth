@@ -1,6 +1,6 @@
 .sibar{
     width: 200px;
-    height: 100%;
+    height: calc(100vh - 56px);
     flex-shrink: 0;
     box-sizing: border-box;
     background-color: var(--Gray-bold);
@@ -10,7 +10,6 @@
     display: flex;
     height: 44px;
     width: 100%;
-    margin-bottom: 4px;
     box-sizing: border-box;
     align-items: center;
     cursor: pointer;
@@ -18,12 +17,13 @@
 }
 
 .item:hover{
-    background-color: #e5e5e5;
+    background-color: var(--Hoversibar);
 }
 
 .item__focus{
-    background-color: #019160;
+    background-color: var(--Hoversibar);
     color: #fff;
+    font-family: Notosans Bold;
     
 }
 
@@ -52,6 +52,7 @@
 .item__icon--money{
     background-image: url(../../assets/img/Sprites.64af8f61.svg);
     background-position: -78px -1631px;
+    filter: brightness(0) invert(1);
 }
 
 .item__icon--moneysend{

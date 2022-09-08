@@ -1,5 +1,67 @@
 .content{
-    width: 100%;
-    background-color: brown;
-    margin: 24px 0px 0px 24px;
+    width: calc(100% - 200px);
+    height: calc(100vh - 56px);
+    background-color: var(--Gray-page-content);
+}
+
+.page__header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 24px 0px 0px 24px;
+}
+
+.page__title{
+    font-size: 24px;
+    font-family: Notosans Bold;
+}
+
+.page__button{
+    position: absolute;
+    right: 0;
+    margin-right: 24px;
+}
+
+.page__information{
+    width: calc(100% - 48px);
+    height: calc(100vh - 144px);
+    display: flex;
+    margin: 8px 24px;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.page__toolbar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: calc(100% - 24px);
+    height: 56px;
+    background-color: #fff;
+}
+
+.page__table{
+    padding: 0 24px;
+    max-height: calc(100vh - 252px);
+    overflow: auto;
+}
+
+.icon--reload{
+    position: relative;
+    margin-left: 8px;
+    width: 36px;
+    height: 36px;
+}
+
+.icon--reload::before{
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 24px;
+    top: 8px;
+    left: 8px;
+    background-image: url(../../assets/img/Sprites.64af8f61.svg);
+    background-position: -1098px -90px;
 }

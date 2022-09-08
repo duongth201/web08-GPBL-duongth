@@ -4,19 +4,27 @@
 @import url(./components/icon.css);
 @import url(./components/button.css);
 @import url(./components/input.css);
-@import url(./components/toast.css);
+@import url(./components/message.css);
+@import url(./components/table.css);
+@import url(./components/paging.css);
+@import url(./components/dialog.css);
+@import url(./components/checkbox.css);
 @import url(../assets/font/fontawesome-5.15.1/js/all.min.js);
 
 :root{
+    --Hovertable: #F2F9FF;
+    --Hoversibar: #58595D;
     --Light-green500: #50B83C; 
     --Light--green400: #73C663;
     --Dark-green: #089740;
     --Gray: #9E9E9E;
+    --Gray-page-content: #eceef1;
     --Gray-400: #BDBDBD;
     --Gray-300: #E0E0E0;
     --Gray-100: #F5F5F5;
     --Red: #E60000;
     --Gray-bold: #424242;
+    --Gray-th: #E5E8EC;
 }
 
 body{

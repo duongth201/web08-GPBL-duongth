@@ -1,0 +1,92 @@
+.table__content {
+
+}
+
+.table__info {
+    width: calc(100% - 0px);
+    border-collapse: collapse;
+    border-spacing: unset;
+    border: unset;
+    box-sizing: border-box;
+}
+
+.table__info thead {
+    background-color: var(--Gray-th);
+}
+
+.table__info tr {
+    border-bottom: 1px solid #ccc;
+    height: 35px;
+}
+
+.table__info tr th {
+    text-transform: uppercase;
+    font-family: Notosans Bold;
+}
+
+.table__info tr td,
+th {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.table__info tr th:first-child {
+    max-width: 40px;
+}
+
+.table__info tr th:not(:last-child) {
+    border-right: 1px solid var(--Gray-400);
+    border-bottom: 1px solid var(--Gray-400);
+}
+
+.table__info tr th:last-child {
+    border-bottom: 1px solid var(--Gray-400);
+}
+
+.table__info tr td:not(:last-child) {
+    border-right: 1px dashed var(--Gray-400);
+    border-bottom: 1px solid var(--Gray-400);
+}
+
+.table__info .text--alignleft {
+    text-align: left;
+}
+
+.table__info .text--alignright {
+    text-align: right;
+}
+
+.table__info .text--aligncenter {
+    text-align: center;
+}
+
+.table__info tbody tr:hover {
+    background-color: var(--Hovertable);
+    cursor: pointer;
+}
+
+.table__info tbody tr.m-row-selected {
+    background-color: #E3F3EE;
+}
+
+.loading {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/loading.svg);
+    animation: 1s loading-left infinite;
+}
+
+.loading--show{
+    display: block;
+}
+
+@keyframes loading-left {
+    form{transform: rotate(0deg);}
+    to{ transform: rotate(360deg);}
+}
+

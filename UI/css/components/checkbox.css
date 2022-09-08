@@ -1,0 +1,40 @@
+.checkbox__group{
+    display: flex;
+}
+
+.checkbox__group .checkbox__input{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none
+}
+.checkbox__group label{
+    position: relative;
+    width: 18px ;
+    height: 18px;
+    border: 1px solid var(--Gray-400);
+    background-color: white;
+    box-shadow: 1px 1px var(--Gray-400) inset;
+    cursor: pointer;
+}
+
+.checkbox__group input[type="checkbox"]:checked + label::after{
+    position: absolute;
+    content: "";
+    top: 6px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    scale: 120%;
+    color: white;
+    background-image: url(../../assets/img/Sprites.64af8f61.svg);
+    background-position: -899px -316px;
+}
+
+.checkbox__group input[type="checkbox"]:checked + label{
+    border: 1px solid var(--Light-green500);
+    box-shadow: none;
+}
+
+

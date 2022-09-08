@@ -8,7 +8,6 @@
     display: flex;
     width: 200px;
     height: 100%;
-    flex-shrink: 0;
     align-items: center;
     box-sizing: border-box;
     background-color: var(--Gray-bold);
@@ -24,8 +23,8 @@
 
 .header__left .header__left--ninedot::before {
     content: "";
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
     width: 24px;
     height: 24px;
     background-image: url(../../assets/img/Sprites.64af8f61.svg);
@@ -42,10 +41,12 @@
 .header__left .header__left--text {
     text-transform: uppercase;
     color: white;
+    margin-left: 8px;
 }
 
 .header .header__right {
     display: flex;
+    flex-shrink: 0;
     width: calc(100% - 200px);
     height: 100%;
     align-items: center;
@@ -66,6 +67,16 @@
     margin: 0 10px;
     width: 24px;
     height: 24px;
+    
+}
+
+.header__right--tiles::before{
+    position: absolute;
+    content: "";
+    top: 6px;
+    left: 6px;
+    width: 24px;
+    height: 24px;
     background-image: url(../../assets/img/Sprites.64af8f61.svg);
     background-position: -847px -35px;
 }
@@ -82,6 +93,7 @@
     justify-content: flex-end;
     align-items: center;
     height: 40px;
+    margin-right: 24px;
 }
 
 .header__right .header__right--info .header__right--notify{
@@ -101,23 +113,21 @@
     position: relative;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     margin: 0 16px;
+}
+
+.header__right--avatarlogo::before{
+    position: absolute;
+    border-radius: 50%;
+    content: "";
+    top: -12px;
+    left: -12px;
+    width: 64px;
+    height: 64px;
+    scale:66.6%;
     background-image: url(../../assets/img/Sprites.64af8f61.svg);
     background-position: -608px -1140px;
 }
-
-/* .header__right--avatarlogo::before{
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 64px;
-    height: 64px;
-    scale: 66.6%;
-    background-image: url(../../assets/img/Sprites.64af8f61.svg);
-    background-position: -608px -1140px;
-} */
 
 .header__right--avatar .header__right--avatarname{
     font-size: 14px;

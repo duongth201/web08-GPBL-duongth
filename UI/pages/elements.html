@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    Kế toán
+    <div class="line__generate">
+        <label for="">1. Button green</label>
+        <div class="line__generate">
+            <button class="btn--green">Button</button>
+        </div>
+    </div>
+
+    <div class="line__generate">
+        <label for="">2. Button white</label>
+        <div class="line__generate">
+            <button class="btn--white">Hủy</button>
+        </div>
+    </div>
+
+    <div class="line__generate">
+        <label for="">3. Input</label>
+        <div class="line__generate">
+            <input type="text" style="width: 200px" class="input" placeholder="Place holder">
+        </div>
+        <div class="line__generate">
+            <input type="text" style="width: 200px" class="input input__error" placeholder="Place holder">
+        </div>
+    </div>
+
+    <div class="line__generate">
+        <label for="">4. Input icon</label>
+        <div class="input__icon">
+            <input type="text" style="width: 250px" class="input input__text" placeholder="Place holder....">
+            <div class="icon input__icon--search"></div>
+        </div>
+    </div>
+
+    <div class="line__generate">
+        <label for="">4.1. Datepicker</label>
+        <div class="input__icon">
+            <input type="date" style="width: 250px" class="input input_date" placeholder="DD/MM/YYYY">
+            <span class="img--date"></span>
+        </div>
+    </div>
+
+    <div class="line__generate">
+        <label for="">5. table</label>
+        <div class="page__table">
+            <div class="table__content">
+                <table id="employeeList" class="table__info">
+                    <thead>
+                        <tr>
+                            <th class="text--aligncenter cbox">
+                                <div class="checkbox__group">
+                                    <input type="checkbox" class="checkbox__input" id="check" hidden>
+                                    <label for="check"></label>
+                                </div>
+                            </th>
+                            <th class="text--alignleft" prop-name="EmployeeCode" style="width: 150px;">Mã nhân viên</th>
+                            <th class="text--alignleft" prop-name="FullName" style="min-width: 170px;">Tên nhân viên
+                            </th>
+                            <th class="text--alignleft" prop-name="GenderName" style="width: 70px;">Giới tính</th>
+                            <th class="text--aligncenter" prop-name="DateOfBirth" format-date style="width: 100px;">Ngày
+                                sinh</th>
+                            <th class="text--alignright" prop-name="" style="width: 150px;">Số cmnd</th>
+                            <th class="text--alignright" prop-name="PositionName" style="width: 150px;">Chức danh</th>
+                            <th class="text--alignright" prop-name="" style="width: 150px;">Tên đơn vị</th>
+                            <th class="text--alignright" prop-name="" style="width: 150px;">Số tài khoản</th>
+                            <th class="text--alignright" prop-name="" style="width: 150px;">Tên ngân hàng</th>
+                            <th class="text--alignright" prop-name="PhoneNumber" style="width: 150px;">ĐT di động</th>
+                            <th class="func text--alignright" style="width: 150px;">Chức năng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <div class="loading"></div>
+                        <tr>
+                            <td class="text--aligncenter">
+                                <input class="check-green" type="checkbox" checked>
+                            </td>
+                            <td class="text--alignleft">NV001</td>
+                            <td class="text--alignleft">Trần Hồ Dương</td>
+                            <td class="text--alignleft">Nam</td>
+                            <td class="text--aligncenter">16/09/2001</td>
+                            <td class="text--alignright">5.000.000</td>
+                            <td class="text--alignleft">Nam</td>
+                            <td class="text--alignleft">Nam</td>
+                            <td class="text--alignleft">Nam</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Paging -->
+        <div class="table__paging">
+            <div class="paging__left">Tổng số: <span>1033</span>bản ghi</div>
+            <div class="paging__right">
+                <select class="combobox" name="" id="">
+                    <option value="10">10 nhân viên/trang</option>
+                    <option value="20">20 nhân viên/trang</option>
+                    <option value="50">50 nhân viên/trang</option>
+                </select>
+                <div class="paging__number">
+                    <button class="btn__first">Trước</button>
+                    <div class="number__group">
+                        <button class="number number--focus">1</button>
+                        <button class="number">2</button>
+                        <button class="number">3</button>
+                        <button class="number">4</button>
+                    </div>
+                    <button class="btn__last">Sau</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="line__generate">
+
+        <label for="">6. dialog - popup</label>
+        <div class="line__generate">
+            <button id="btnAdd" class="btn--green">Thêm mới nhân viên</button>
+        </div>
+        <!-- Dialog chi tiết nhân viên -->
+        <div id="dlgEmployeeDetail" class="dialog" hidden>
+            <div class="dialog__content">
+                <div class="btn__dialog">
+                    <div id="btnClose2" class="dialog__button--close"></div>
+                    <div id="btnClose2" class="dialog__button--help"></div>
+                </div>
+                <div class="dialog__header title">Thông tin nhân viên</div>
+                <div class="dialog__body">
+                    <div class="wrap--1">
+                        <div class="wrap--1-2 padring--26">
+                            <span class="row">
+                                <div class="detail row--2-5 padright--6">
+                                    <label>Mã <span class="input--required">*</span></label>
+                                    <input type="text" class="input" placeholder="Place holder">
+                                </div>
+                                <div class="detail row--3-5">
+                                    <label>Tên <span class="input--required">*</span></label>
+                                    <input type="text" class="input" placeholder="Place holder">
+                                </div>
+                            </span>
+                            <div class="detail mt--16">
+                                <label>Đơn vị <span class="input--required">*</span></label>
+                                <input type="text" class="input" placeholder="Place holder">
+                            </div>
+                            <div class="detail mt--16">
+                                <label>Chức danh </label>
+                                <input type="text" class="input" placeholder="Place holder">
+                            </div>
+                        </div>
+
+                        <div class="wrap--1-2">
+                            <span class="row">
+                                <div class="detail row--2-5 padright--6">
+                                    <label>Ngày sinh </label>
+                                    <input type="date" class="input">
+                                </div>
+                                <div class="detail row--3-5">
+                                    <label>Giới tính</label>
+                                    <div class="gender">
+                                        <input type="radio">Name
+                                        <input type="radio">Nữ
+                                        <input type="radio">Khác
+                                    </div>
+
+                                </div>
+                            </span>
+                            <div class="detail mt--16">
+                                <span class="row">
+                                    <div class="detail row--3-5 padright--6">
+                                        <label>Số CMND </label>
+                                        <input type="text" class="input" placeholder="Place holder">
+                                    </div>
+                                    <div class="detail row--2-5">
+                                        <label>Ngày cấp </label>
+                                        <input type="date" class="input">
+                                    </div>
+                                </span>
+
+                            </div>
+                            <div class="detail mt--16">
+                                <label>Nơi cấp</label>
+                                <input type="text" class="input" placeholder="Place holder">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="wrap--2 padtop--24">
+                        <div class="wrap">
+                            <div class="detail">
+                                <label>Địa chỉ</label>
+                                <input type="text" class="input" placeholder="Place holder">
+                            </div>
+                        </div>
+                        <span class="row">
+                            <div class="detail row--1-4 mt--16">
+                                <label>ĐT di động</label>
+                                <input type="text" class="input" placeholder="Place holder">
+                            </div>
+                            <div class="detail row--1-4 mt--16">
+                                <label>ĐT cố định</label>
+                                <input type="text" class="input" placeholder="Place holder">
+                            </div>
+                            <div class="detail row--1-4 mt--16">
+                                <label>Email</label>
+                                <input type="text" class="input" placeholder="Place holder">
+                            </div>
+                        </span>
+                        <span class="row">
+                            <div class="detail row--1-4 mt--16">
+                                <label>Tài khoản ngân hàng</label>
+                                <input type="text" class="input" placeholder="Place holder">
+                            </div>
+                            <div class="detail row--1-4 mt--16">
+                                <label>Tên ngân hàng</label>
+                                <input type="text" class="input" placeholder="Place holder">
+                            </div>
+                            <div class="detail row--1-4 mt--16">
+                                <label>Chi nhánh</label>
+                                <input type="text" class="input" placeholder="Place holder">
+                            </div>
+                        </span>
+                    </div>
+                    <div class="dialog__footer">
+                        <button class="button--cancel btn--white">Hủy</button>
+                        <div>
+                            <button class="btn--white mr--8">Cất</button>
+                            <button id="btnSave" class="btn--green">Cất và thêm</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="line__generate">
+        <label for="">7. Notify</label>
+        <div class="line__generate">
+            <button id="btn--notify" class="btn--green">Notify</button>
+        </div>
+        <!-- Message notify -->
+        <div id="dlgNotify" class="dialog" hidden>
+            <div id="noti1" class="notify__content">
+                <div class="notify__detail">
+                    <div class="content--circle"></div>
+                    <div class="content--text">Tên không được để trống.</div>
+                </div>
+                <div class="notify__footer">
+                    <button class="btn--green">Đóng</button>
+                </div>
+            </div>
+        </div>
+        <!-- Message notify 2 -->
+        <div id="dlgNotify" class="dialog" hidden>
+            <div id="noti2" class="notify__content--2">
+                <div class="notify__detail">
+                    <div class="content--triangle"></div>
+                    <div class="content--text2">Mã nhân viên ... đã tồn tại trong hệ thống, vui lòng kiểm tra lại.</div>
+                </div>
+                <div class="notify__footer--2">
+                    <button class="btn--green">Đồng ý</button>
+                </div>
+            </div>
+        </div>
+        <!-- Message notify 3 -->
+        <div id="dlgNotify" class="dialog" hidden>
+            <div id="noti3" class="notify__content--2">
+                <div class="notify__detail">
+                    <div class="content--triangle"></div>
+                    <div class="content--text2">Mã nhân viên ... đã tồn tại trong hệ thống, vui lòng kiểm tra lại.</div>
+                </div>
+                <div class="notify__footer--3">
+                    <button class="btn--white">Không</button>
+                    <button class="btn--green">Có</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Thư viện JS -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <!-- JS dùng chung -->
+
+    <!-- JS dùng riêng -->
+    <script src="../js/pages/elements.js"></script>
+</body>
+
+</html>
