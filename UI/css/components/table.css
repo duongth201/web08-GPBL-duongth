@@ -69,6 +69,10 @@ th {
     background-color: #E3F3EE;
 }
 
+.click__td {
+    background-color: var(--Hovertable);
+}
+
 .loading {
     display: none;
     position: absolute;
@@ -89,4 +93,6 @@ th {
     form{transform: rotate(0deg);}
     to{ transform: rotate(360deg);}
 }
+
+
 

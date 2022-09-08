@@ -9,11 +9,13 @@
 @import url(./components/paging.css);
 @import url(./components/dialog.css);
 @import url(./components/checkbox.css);
+@import url(./components/contextmenu.css);
 @import url(../assets/font/fontawesome-5.15.1/js/all.min.js);
 
 :root{
     --Hovertable: #F2F9FF;
     --Hoversibar: #58595D;
+    --Hovercontext: #E8E9EC;
     --Light-green500: #50B83C; 
     --Light--green400: #73C663;
     --Dark-green: #089740;
@@ -25,6 +27,7 @@
     --Red: #E60000;
     --Gray-bold: #424242;
     --Gray-th: #E5E8EC;
+    --Blue: #0075C0;
 }
 
 body{

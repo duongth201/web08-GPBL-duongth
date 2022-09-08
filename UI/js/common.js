@@ -38,25 +38,28 @@ var common = {
             console.log(error);
         }
     },
-
-    showSuccessDialog(){
+    /**
+     * Hiển thị dialog hỏi xóa
+     * @param {}  
+     * Athor: 
+     */
+     showEmptyDialog(msgErrors) {
         try {
-            // Khai báo html của dialog:
-            let dialogHTML = $(`<div class="dialog dialog--warning">
-                                    <div class="dialog__content">
-                                        <div id="btnClose3" class="dialog__button--close"></div>
-                                        <div class="dialog__header title">Thông báo</div>
-                                        <div class="dialog__body">
-                                           
+            //1. Khai báo html của dialog:
+            let dialogHTML = $(`<div id="dlgNotify" class="dialog">
+                                    <div class="notify__content">
+                                        <div class="notify__detail">
+                                            <div class="content--circle"></div>
+                                            <div class="content--text"></div>
                                         </div>
-                                        <div class="dialog__footer">
-                                            <button id="btnOk" class="button">Đồng ý</button>
+                                        <div class="notify__footer">
+                                            <button class="btn--green">Đóng</button>
                                         </div>
                                     </div>
                                 </div>`);
 
             // Build nội dung dialog:
-            var dialogBody = $(dialogHTML).find(".dialog__body");
+            var dialogBody = $(dialogHTML).find("#dlgNotify .content--text");
             // 2 - append các nội dung cảnh báo mới:
             if (msgErrors) {
                 for (const msg of msgErrors) {
@@ -67,6 +70,7 @@ var common = {
 
             // Hiển thị dialog:
             $('body').append(dialogHTML);
+
         } catch (error) {
             console.log(error);
         }
@@ -81,7 +85,7 @@ var common = {
         try {
             if (date) {
                 date = new Date(date)
-                    // Lấy ra ngày:
+                // Lấy ra ngày:
                 let day = date.getDate();
                 day = day < 10 ? `0${day}` : day;
                 let month = date.getMonth() + 1;
@@ -117,7 +121,7 @@ var common = {
  * Gán sự kiện validate tự động cho các input bắt buộc nhập
  * author: DuongTH
  */
-$("input[inputempty]").blur(function() {
+$("input[inputempty]").blur(function () {
     try {
         // lấy value:
         var value = $(this).val();

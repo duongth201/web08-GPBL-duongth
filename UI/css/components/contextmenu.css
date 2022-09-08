@@ -1,0 +1,69 @@
+.contextmenu{
+    position: relative;
+    width: 70px;
+}
+
+.contextmenu__main{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.contextmenu__button{
+    color: var(--Blue);
+}
+
+.contextmenu__dropdown{
+    position: relative;
+    width: 28px;
+    height: 16px;
+    margin: 8px;
+}
+.contextmenu__dropdown::before{
+    cursor: pointer;
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    margin-left: 5px;
+    background-image: url(../../assets/img/Sprites.64af8f61.svg);
+    background-position: -896px -359px;
+    filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+}
+
+.choose{
+    border: 1px solid var(--Blue);
+}
+
+.contextmenu__menu{
+    z-index: 100;
+    background-color: white;
+    display: none;
+    min-width: 130px;
+    position: absolute;
+    right: -10px;
+    top:22px;
+    background-color: white;
+    border: 1px solid var(--Gray);
+    border-radius: 4px;
+}
+
+.choose .contextmenu__menu{
+    display: block;
+}
+
+.contextmenu__option{
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+.contextmenu__option:hover{
+    background-color: var(--Hovercontext);
+    color: var(--Light-green500);
+}
+
+.contextmenu__option:active{
+    color: var(--Light-green500);
+}

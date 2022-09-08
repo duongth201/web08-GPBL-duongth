@@ -108,27 +108,41 @@
                             <div id="btnClose2" class="dialog__button--close"></div>
                             <div id="btnClose2" class="dialog__button--help"></div>
                         </div>
-                        <div class="dialog__header title">Thông tin nhân viên</div>
+                        <div class="dialog__header ">
+                            <label class="title" for="">Thông tin nhân viên</label>
+                            <div class="checkbox__group mr--16 ml--8">
+                                <input type="checkbox" class="checkbox__input " id="check1" hidden>
+                                <label class="cbox mr--8" tabindex="0" for="check1"></label>Là khách hàng
+                            </div>
+                            <div class="checkbox__group mr--16 ml--8">
+                                <input type="checkbox" class="checkbox__input" id="check2" hidden>
+                                <label class="cbox mr--8" tabindex="0" for="check2"></label>Là nhà cung cấp
+                            </div>
+                        </div>
                         <div class="dialog__body">
                             <div class="wrap--1">
                                 <div class="wrap--1-2 padring--26">
                                     <span class="row">
                                         <div class="detail row--2-5 padright--6">
                                             <label>Mã <span class="input--required">*</span></label>
-                                            <input type="text" id="txtEmployeeCode" class="input" prop-name="EmployeeCode" inputempty placeholder="Place holder">
+                                            <input type="text" tabindex="0" id="txtEmployeeCode" class="input"
+                                                prop-name="EmployeeCode" inputempty placeholder="Place holder">
                                         </div>
                                         <div class="detail row--3-5">
                                             <label>Tên <span class="input--required">*</span></label>
-                                            <input type="text" id="txtFullName" class="input" prop-name="FullName" inputempty placeholder="Place holder">
+                                            <input type="text" tabindex="0" id="txtFullName" class="input"
+                                                prop-name="FullName" inputempty placeholder="Place holder">
                                         </div>
                                     </span>
                                     <div class="detail mt--16">
                                         <label>Đơn vị <span class="input--required">*</span></label>
-                                        <input type="text" class="input" inputempty placeholder="Place holder">
+                                        <input type="text" tabindex="0" id="txtUnit" class="input" inputempty
+                                            placeholder="Place holder">
                                     </div>
                                     <div class="detail mt--16">
                                         <label>Chức danh </label>
-                                        <input type="text" class="input" inputempty placeholder="Place holder">
+                                        <input type="text" tabindex="0" class="input" inputempty
+                                            placeholder="Place holder">
                                     </div>
                                 </div>
 
@@ -136,19 +150,19 @@
                                     <span class="row">
                                         <div class="detail row--2-5 padright--6">
                                             <label>Ngày sinh </label>
-                                            <input type="date" inputempty class="input input_date">
+                                            <input type="date" tabindex="0" inputempty class="input input_date">
                                         </div>
                                         <div class="detail row--3-5 padleft--16">
                                             <label>Giới tính</label>
                                             <div class="gender">
                                                 <div class="gender__detail">
-                                                    <input type="radio"><label for="">Nam</label>
+                                                    <input type="radio" tabindex="0"><label for="">Nam</label>
                                                 </div>
                                                 <div class="gender__detail">
-                                                    <input type="radio"><label for="">Nữ</label>
+                                                    <input type="radio" tabindex="0"><label for="">Nữ</label>
                                                 </div>
                                                 <div class="gender__detail">
-                                                    <input type="radio"><label for="">Khác</label>
+                                                    <input type="radio" tabindex="0"><label for="">Khác</label>
                                                 </div>
                                             </div>
 
@@ -221,6 +235,45 @@
 
                     </div>
                 </div>
+                <!-- Message notify -->
+                <!-- <div id="dlgNotify" class="dialog" hidden>
+                    <div class="notify__content">
+                        <div class="notify__detail">
+                            <div class="content--circle"></div>
+                            <div class="content--text">Tên không được để trống.</div>
+                        </div>
+                        <div class="notify__footer">
+                            <button class="btn--green">Đóng</button>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- Message notify 2 -->
+                <div id="dlgNotify2" class="dialog" hidden>
+                    <div  class="notify__content--2">
+                        <div class="notify__detail">
+                            <div class="content--triangle"></div>
+                            <div class="content--text2">Mã nhân viên ... đã tồn tại trong hệ thống, vui lòng kiểm tra
+                                lại.</div>
+                        </div>
+                        <div class="notify__footer--2">
+                            <button class="btn--green">Đồng ý</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Message notify 3 -->
+                <div id="dlgNotifyDelete" class="dialog" hidden>
+                    <div  class="notify__content--2">
+                        <div class="notify__detail">
+                            <div class="content--triangle"></div>
+                            <div class="content--text2">Mã nhân viên ... đã tồn tại trong hệ thống, vui lòng kiểm tra
+                                lại.</div>
+                        </div>
+                        <div class="notify__footer--3">
+                            <button class="btn--white">Không</button>
+                            <button class="btn--green">Có</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="page__information">
                 <!-- Toolbar -->
@@ -244,17 +297,24 @@
                                             <label for="check"></label>
                                         </div>
                                     </th>
-                                    <th class="text--alignleft" prop-name="EmployeeCode" style="width: 150px;">Mã nhân viên</th>
-                                    <th class="text--alignleft" prop-name="FullName" style="min-width: 170px;">Tên nhân viên</th>
-                                    <th class="text--alignleft" prop-name="GenderName" style="width: 100px;">Giới tính</th>
-                                    <th class="text--aligncenter" prop-name="DateOfBirth" format-date style="width: 100px;">Ngày sinh</th>
+                                    <th class="text--alignleft" prop-name="EmployeeCode" style="width: 150px;">Mã nhân
+                                        viên</th>
+                                    <th class="text--alignleft" prop-name="FullName" aria-required="Trống"
+                                        style="min-width: 170px;">Tên nhân viên</th>
+                                    <th class="text--alignleft" prop-name="GenderName" style="width: 100px;">Giới tính
+                                    </th>
+                                    <th class="text--aligncenter" prop-name="DateOfBirth" format-date
+                                        style="width: 100px;">Ngày sinh</th>
                                     <th class="text--alignright" prop-name="" style="width: 150px;">Số cmnd</th>
-                                    <th class="text--alignright" prop-name="PositionName" style="width: 150px;">Chức danh</th>
-                                    <th class="text--alignright" prop-name="DepartmentName" style="width: 150px;">Tên đơn vị</th>
+                                    <th class="text--alignright" prop-name="PositionName" style="width: 150px;">Chức
+                                        danh</th>
+                                    <th class="text--alignright" prop-name="DepartmentName" style="width: 150px;">Tên
+                                        đơn vị</th>
                                     <th class="text--alignright" prop-name="" style="width: 150px;">Số tài khoản</th>
                                     <th class="text--alignright" prop-name="" style="width: 200px;">Tên ngân hàng</th>
-                                    <th class="text--alignright" prop-name="PhoneNumber" style="width: 150px;">ĐT di động</th>
-                                    <th class="func text--alignright" style="width: 150px;">Chức năng</th>
+                                    <th class="text--alignright" prop-name="PhoneNumber" style="width: 150px;">ĐT di
+                                        động</th>
+                                    <th class="text--alignright" style="width: 150px;">Chức năng</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -291,8 +351,10 @@
         <!-- JS dùng chung -->
         <script src="./js/common.js"></script>
         <script src="./js/enum.js"></script>
+        <script src="./js/resource.js"></script>
         <!-- JS dùng riêng -->
         <script src="./js/pages/page.js"></script>
+        
 </body>
 
 </html>
